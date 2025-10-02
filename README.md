@@ -20,8 +20,10 @@ pip freeze > requirements.txt
 pip install -r requirements.txt 
 
 # Lancer l'api en mode dev
-# depuis /app
-fastapi dev main.py
+fastapi dev app/main.py
+
+# ancienne commande qui permet de spécifier un dossier à "watch"
+uvicorn app.main:app --reload --reload-dir app
 
 # Lancez les instances redis et redis-insight
 docker compose up
@@ -87,12 +89,12 @@ Mise en place d'une API python avec FastAPI
 - [x] pour vérifiez que tout fonctionne, faites une simple route de test (genre "Hello world") et connectez y vous
 
 CRUD des Articles
-- [] définissez une class python "Article" (title, content...)
-- [] route GET /article/{id} doit retourner l'article en question
-- [] route POST /article doit créer un article grâce à un payload json (title, contenu)
+- [x] définissez une class python "Article" (title, content...)
+- [x] route GET /article/{id} doit retourner l'article en question
+- [x] route POST /article doit créer un article grâce à un payload json (title, contenu)
 - [] route DELETE /article/{id} supprime l'article à l'id donné
 - [] route PATCH /article/{id} update l'article à l'article donné si il existe
-- [] trouvez comment isoler toutes ces routes dans un fichier séparé (/routes/articles.py) et donnez le prefix "/article" à toutes ces routes (vous ferez de même avec les autres CRUD)
+- [x] trouvez comment isoler toutes ces routes dans un fichier séparé (/routes/articles.py) et donnez le prefix "/article" à toutes ces routes (vous ferez de même avec les autres CRUD)
 
 Pseudo-relations
 - [] comment organiser son code si je veux commencer à tisser des relations entre mes models (Article, Comment, User...) ?
