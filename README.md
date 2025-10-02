@@ -33,9 +33,9 @@ ZSet
 - [x] découvrez ce que sont les Zset et promis on arrete là !
 
 Persistence
-- [] trouver comment activer la persistance sur Redis (AOF et/ou RDB)
-- [] pour tester, regarder si votre container contient bien un fichier de données sur le disque
-- [] enfin, trouver comment lancer un container Redis contenant DEJA des données issues d'une session précédente
+- [x] trouver comment activer la persistance sur Redis (AOF et/ou RDB)
+- [x] pour tester, regarder si votre container contient bien un fichier de données sur le disque
+- [x] enfin, trouver comment lancer un container Redis contenant DEJA des données issues d'une session précédente
 
 Interface Graphique
 - [] Trouvez une image docker fournissant une interface graphique à Redis
