@@ -77,14 +77,14 @@ Setup d'un vrai projet
 - [x] mettez en place de la persistence et une configuration qui devra vivre dans un dossier `/docker/redis` par exemple (volume à monter)
 
 Maitre et répliques
-- [] en utilisant votre configuration actuelle, faite de votre service "redis" une instance maitresse et ajoutez 2 services "redis-r1", "redis-r2" qui doivent agir en répliques
-- [] pour vérifier que tout fonctionne, écrivez des données, et essayez de les lire directement en vous connectant à une des instances "réplique"
+- [x] en utilisant votre configuration actuelle, faite de votre service "redis" une instance maitresse et ajoutez 2 services "redis-r1", "redis-r2" qui doivent agir en répliques
+- [x] pour vérifier que tout fonctionne, écrivez des données, et essayez de les lire directement en vous connectant à une des instances "réplique"
 
 Mise en place d'une API python avec FastAPI
-- [] ajoutez au projet un dossier /app qui contiendra tout le code source de votre application python
-- [] mettez en place un [venv](https://docs.python.org/3/library/venv.html) afin d'éviter d'installer les dépendences du projet globalement sur votre machine
-- [] installez dans le venv FastAPI en suivant la [documentation officielle du framework](https://fastapi.tiangolo.com/)
-- [] pour vérifiez que tout fonctionne, faites une simple route de test (genre "Hello world") et connectez y vous
+- [x] ajoutez au projet un dossier /app qui contiendra tout le code source de votre application python
+- [x] mettez en place un [venv](https://docs.python.org/3/library/venv.html) afin d'éviter d'installer les dépendences du projet globalement sur votre machine
+- [x] installez dans le venv FastAPI en suivant la [documentation officielle du framework](https://fastapi.tiangolo.com/)
+- [x] pour vérifiez que tout fonctionne, faites une simple route de test (genre "Hello world") et connectez y vous
 
 CRUD des Articles
 - [] définissez une class python "Article" (title, content...)
