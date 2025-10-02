@@ -4,6 +4,24 @@ services:
         ports:
             - "6379:6379"
         volumes:
-          - "./redis/redis.conf:/usr/local/etc/redis/redis.conf"
-          - "./redis/data/:/data"
+            - "./redis/redis.conf:/usr/local/etc/redis/redis.conf"
+            - "./redis/data/:/data"
         command: [ "redis-server", "/usr/local/etc/redis/redis.conf"]
+
+    redisinsight:
+        image: redis/redisinsight
+        ports:
+            - "5540:5540"
+        depends_on: 
+            - redis
+        
+    # Exemple en passant par redis-stack qui incorpore redis-insight
+    # https://hub.docker.com/r/redis/redis-stack
+    # redisstack:
+    #     image: redis/redis-stack
+    #     ports:
+    #         - "6379:6379"
+    #         - "8001:8001"
+    #     volumes:
+    #       - "./redis/redis.conf:/redis-stack.conf"
+    #       - "./redis/data/:/data"

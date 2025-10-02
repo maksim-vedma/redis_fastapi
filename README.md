@@ -38,14 +38,14 @@ Persistence
 - [x] enfin, trouver comment lancer un container Redis contenant DEJA des données issues d'une session précédente
 
 Interface Graphique
-- [] Trouvez une image docker fournissant une interface graphique à Redis
-- [] Faites en sorte que l'interface graphique puisse se connecter à votre serveur afin de visualiser et manipuler les données qui s'y trouvent
+- [x] Trouvez une image docker fournissant une interface graphique à Redis
+- [x] Faites en sorte que l'interface graphique puisse se connecter à votre serveur afin de visualiser et manipuler les données qui s'y trouvent
 
 Setup d'un vrai projet
-- [] créez un nouveau projet (document) qui vous servira de sandbox pour le reste des exercices
-- [] à la racine, créez un compose.yml (ou docker-compose.yml) dans lequel vous définirez un service "redis" (pensez à exposer le/les port(s))
-- [] OPTIONNEL: vous pouvez ajouter une interface graphique redis pour monitorer
-- [] mettez en place de la persistence et une configuration qui devra vivre dans un dossier `/docker/redis` par exemple (volume à monter)
+- [x] créez un nouveau projet (document) qui vous servira de sandbox pour le reste des exercices
+- [x] à la racine, créez un compose.yml (ou docker-compose.yml) dans lequel vous définirez un service "redis" (pensez à exposer le/les port(s))
+- [x] OPTIONNEL: vous pouvez ajouter une interface graphique redis pour monitorer
+- [x] mettez en place de la persistence et une configuration qui devra vivre dans un dossier `/docker/redis` par exemple (volume à monter)
 
 Maitre et répliques
 - [] en utilisant votre configuration actuelle, faite de votre service "redis" une instance maitresse et ajoutez 2 services "redis-r1", "redis-r2" qui doivent agir en répliques
