@@ -1,5 +1,34 @@
 # Redis + FastAPI
 
+## Dev
+Version de Python utilisée pour ce projet:
+- Python 3.12.3
+
+```shell
+# Activation du venv Python
+source ./.venv/bin/activate
+# ou source ./.venv/bin/activate.fish selon votre shell
+# puis
+deactivate
+
+# Installer FastAPI de zéro
+pip install "fastapi[standard]"
+# puis faire une sauvegarde des dépendences actuelles
+pip freeze > requirements.txt
+
+#ou bien installer les dépendences listé dans requirements.txt
+pip install -r requirements.txt 
+
+# Lancer l'api en mode dev
+# depuis /app
+fastapi dev main.py
+
+# Lancez les instances redis et redis-insight
+docker compose up
+
+# Redis Insight est disponible sur http://localhost:4450
+```
+
 ## TODO list
 
 Setup simple

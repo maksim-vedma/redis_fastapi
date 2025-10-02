@@ -1,1 +1,4 @@
 /redis/data/
+.venv
+__pycache__
+
