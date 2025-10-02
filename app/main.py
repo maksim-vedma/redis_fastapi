@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
-from app.routers import articles
+from app.routers import articles, pokedex
 from app.db.redis import r
 
 
@@ -22,6 +22,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 
 app.include_router(articles.router)
+app.include_router(pokedex.router)
 
 @app.get("/")
 async def read_root():

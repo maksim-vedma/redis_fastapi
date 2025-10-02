@@ -92,15 +92,15 @@ CRUD des Articles
 - [x] définissez une class python "Article" (title, content...)
 - [x] route GET /article/{id} doit retourner l'article en question
 - [x] route POST /article doit créer un article grâce à un payload json (title, contenu)
-- [] route DELETE /article/{id} supprime l'article à l'id donné
-- [] route PATCH /article/{id} update l'article à l'article donné si il existe
+- [x] route DELETE /article/{id} supprime l'article à l'id donné
+- [x] route PATCH /article/{id} update l'article à l'article donné si il existe
 - [x] trouvez comment isoler toutes ces routes dans un fichier séparé (/routes/articles.py) et donnez le prefix "/article" à toutes ces routes (vous ferez de même avec les autres CRUD)
+
+Pokedex
+- [x] vous utiliserez l'api gratuite [pokeapi](https://pokeapi.co/)
+- [x] faites une plusieurs routes (prefix "/pokedex") qui doivent servir de proxy à la pokeapi afin de gagner en performance (ex: si votre user va sur la route /pokeapi/pokemon/ditto, il faudra lui renvoyer LE PLUS VITE POSSIBLE les informations concernant ce pokemon en interrogeant, ou pas, la pokeapi)
 
 Pseudo-relations
 - [] comment organiser son code si je veux commencer à tisser des relations entre mes models (Article, Comment, User...) ?
 - [] admettons que mon Article est écrit par un User: comment faire, depuis l'id d'un article, pour récupérer les données de son auteur ?
 - [] faire en sorte que l'on puisse récupérer les Categories d'un article (many-to-many ?)
-
-Pokedex
-- [] vous utiliserez l'api gratuite [pokeapi](https://pokeapi.co/)
-- [] faites une plusieurs routes (prefix "/pokedex") qui doivent servir de proxy à la pokeapi afin de gagner en performance (ex: si votre user va sur la route /pokeapi/pokemon/ditto, il faudra lui renvoyer LE PLUS VITE POSSIBLE les informations concernant ce pokemon en interrogeant, ou pas, la pokeapi)

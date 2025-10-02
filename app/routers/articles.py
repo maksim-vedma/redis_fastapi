@@ -10,6 +10,15 @@ router = APIRouter(
     responses={HTTPStatus.NOT_FOUND: {"description": "Not found"}},
 )
 
+@router.get("")
+async def list_article():
+    articles = []
+    async for key in r.scan_iter(match=f"{Article.key()}:*"):
+        data = await r.hgetall(key)
+        articles.append({"key": key, **data})
+
+    return articles
+
 @router.get("/{id}")
 async def read_article(id: int):
     return await r.hgetall(f"{Article.key()}:{id}")
